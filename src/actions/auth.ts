@@ -63,9 +63,9 @@ export async function register(
                 name,
             },
         });
-    } catch (error) {
+    } catch (error: any) {
         console.error('Registration error:', error);
-        return 'Failed to register user.';
+        return `Error: ${error.message}`;
     }
 
     return "Registration successful! Please log in.";
