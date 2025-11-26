@@ -64,6 +64,7 @@ export async function register(
             },
         });
     } catch (error) {
+        console.error('Registration error:', error);
         return 'Failed to register user.';
     }
 
